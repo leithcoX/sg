@@ -61,7 +61,7 @@ export class SceneManager {
         const surface = new THREE.Mesh(plane, grass)
         surface.rotateX(-Math.PI / 2)
         scene.add(surface)
-        surface.translateZ(-0.001)
+        surface.translateZ(-0.005)
 
         const circle = new THREE.CircleGeometry(2)
         const water = new THREE.MeshPhongMaterial({ color: 0x88e1ff })
@@ -73,6 +73,7 @@ export class SceneManager {
         puddle2.translateY(10.5)
         // puddle2.translateX(1)
         scene.add(puddle1)
+        puddle2.translateZ(0.005)
         scene.add(puddle2)
 
         const logGeometry = new THREE.CylinderGeometry(.1, .25, 2.5)
